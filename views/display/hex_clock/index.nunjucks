@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Hex时钟</title>
+    <style>
+        html,body,div{
+            width: 100%;height: 100%;margin: 0;padding: 0;display: flex;
+        }
+    </style>
+</head>
+<body>
+<div id='hintDiv' style="background-color: darkgray;justify-content: center;align-items: center;">
+    <code id="hintText" style="color: white;font-size: 5em;font-weight: 200;font-family: sans-serif;word-break:break-all;white-space: pre-wrap;"></code>
+</div>
+
+<script>
+    function num2str(num){
+        let numStr = num.toString()
+        if(numStr.length <= 0){
+            return '00'
+        }else if(numStr.length == 1){
+            return '0'+numStr
+        }if(numStr.length >= 2){
+            return numStr.substr(0,2)
+        }
+    }
+
+    function refresh(){
+        console.log('refresh')
+        let date = new Date()
+        let hintText = document.getElementById('hintText')
+        let hintDiv = document.getElementById('hintDiv')
+        let hexString = num2str(date.getHours().toString())+num2str(date.getMinutes().toString())+num2str(date.getSeconds().toString())
+
+        hintText.innerText = '#'+ hexString
+        hintDiv.style.backgroundColor = '#'+ hexString
+    }
+
+    setInterval(() => {
+
+        refresh()
+
+    }, 1000);
+
+    refresh()
+
+</script>
+</body>
+</html>
+
