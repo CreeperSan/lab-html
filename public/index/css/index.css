@@ -19,6 +19,7 @@ html,body{
     background: rebeccapurple url(http://i0.hdslb.com/bfs/article/1724e9b16cf5a95d8f4f48a79ba07eb6d3c80455.jpg);
     margin: 26px;
     display: flex;
+    flex-direction:column;
     border-radius: 12px;
     transition-duration: 300ms;
 }

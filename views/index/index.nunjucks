@@ -20,12 +20,12 @@
 
             {% for item in content.items %}
 
-                <div class="index-item-div">
+                <a class="index-item-div" href="{{ item.url }}">
                     <div class="index-item-div-filter">
                         <span class="index-item-div-title">{{ item.title }}</span>
                         <span class="index-item-div-subtitle">{{ item.description }}</span>
                     </div>
-                </div>
+                </a>
 
             {% endfor %}
 

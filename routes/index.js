@@ -9,7 +9,8 @@ router.get('/', async (ctx, next) => {
           items : [
             {
               title : 'hex时钟',
-              description : 'hex'
+              description : 'hex',
+              url : '/display/hex_clock'
             }
           ]
         }
