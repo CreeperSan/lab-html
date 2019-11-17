@@ -10,7 +10,7 @@ router.get('/', async (ctx, next) => {
             {
               title : 'hex时钟',
               description : 'hex',
-              url : '/display/hex_clock'
+              background_url : '/res/index/img_thumbnail_display_hex_clock.jpg'
             }
           ]
         }

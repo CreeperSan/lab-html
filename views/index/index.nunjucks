@@ -8,10 +8,10 @@
 {% endblock %}
 
 {% block body %}
-    <div style="display: flex;flex-direction: row;flex-wrap: wrap;align-items: center;justify-content: center;">
-        <div style="display: flex;flex-direction:column;justify-content:center;align-items:center;width: 100%;height:300px;background: url('http://i0.hdslb.com/bfs/article/1724e9b16cf5a95d8f4f48a79ba07eb6d3c80455.jpg');">
-            <h1 style="text-align: center;">实验室</h1>
-            <span>都是一些乱七八糟的东西</span>
+    <div class="root-div">
+        <div class="header-div">
+            <h1 class="header-title">实验室</h1>
+            <span class="header-description">都是一些乱七八糟的东西</span>
         </div>
 
         {% for content in data.content %}
@@ -21,7 +21,7 @@
             {% for item in content.items %}
 
                 <a class="index-item-div" href="{{ item.url }}">
-                    <div class="index-item-div-filter">
+                    <div class="index-item-div-filter" style="background: url('{{ item.background_url }}') center center">
                         <span class="index-item-div-title">{{ item.title }}</span>
                         <span class="index-item-div-subtitle">{{ item.description }}</span>
                     </div>
