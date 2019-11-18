@@ -7,7 +7,7 @@
 {% block head_description %}涂涂画画涂涂画画{% endblock %}
 
 {% block head %}
-    <link rel="shortcut icon" href="/index/res/favicon_index.ico">
+    <link rel="shortcut icon" href="/res/index/favicon_index.ico">
     <link rel="stylesheet" href="/index/css/index.css"/>
     <script src="/index/js/index.js"></script>
 {% endblock %}
