@@ -5,12 +5,13 @@ router.get('/', async (ctx, next) => {
     data: {
       content : [
         {
-          category_name : '展示',
+          category_name : '👀',
           items : [
             {
               title : 'hex时钟',
-              description : 'hex',
-              background_url : '/res/index/img_thumbnail_display_hex_clock.jpg'
+              description : '如果把当前时间作为RGB颜色...',
+              background_url : '/res/index/img_thumbnail_display_hex_clock.jpg',
+              url : '/display/hex_clock'
             }
           ]
         }

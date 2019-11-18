@@ -1,8 +1,13 @@
 {% extends "views/base/base_html.nunjucks" %}
 
-{% block head_title %} 标题 {% endblock %}
+{% block head_title %} CreeperSan的涂鸦 {% endblock %}
+
+{% block head_keyword %}CreeperSan,涂鸦,瞎折腾,Creeper_San,实验,视觉效果{% endblock %}
+
+{% block head_description %}涂涂画画涂涂画画{% endblock %}
 
 {% block head %}
+    <link rel="shortcut icon" href="/index/res/favicon_index.ico">
     <link rel="stylesheet" href="/index/css/index.css"/>
     <script src="/index/js/index.js"></script>
 {% endblock %}
@@ -10,7 +15,7 @@
 {% block body %}
     <div class="root-div">
         <div class="header-div">
-            <h1 class="header-title">实验室</h1>
+            <h1 class="header-title">涂鸦</h1>
             <span class="header-description">都是一些乱七八糟的东西</span>
         </div>
 
@@ -20,10 +25,9 @@
 
             {% for item in content.items %}
 
-                <a class="index-item-div" href="{{ item.url }}">
-                    <div class="index-item-div-filter" style="background: url('{{ item.background_url }}') center center">
+                <a class="index-item-div" href="{{ item.url }}" title="{{ item.description }}">
+                    <div class="index-item-div-filter" style="background: url('{{ item.background_url }}') center center;">
                         <span class="index-item-div-title">{{ item.title }}</span>
-                        <span class="index-item-div-subtitle">{{ item.description }}</span>
                     </div>
                 </a>
 
@@ -31,8 +35,21 @@
 
         {% endfor %}
 
-        <nav style="width: 100%;padding: 1.8em 0;background-color: azure;justify-content: center;align-items: center;display: flex;flex-direction: column;margin-top: 20px;">
-            <span style="text-align: center;width: 100%;">Copyright © 2019 CreeperSan</span>
+        <nav class="index-nav">
+            <span class="index-nav-text">Copyright © 2019 CreeperSan</span>
+            <span class="index-nav-text">🐕</span>
+            <span class="index-nav-content-title">看看其他</span>
+            <div class="index-nav-content-div">
+                <div class="index-nav-item-div">
+                    <a class="index-nav-item-selection" href="http://bing.creepersan.com">必应壁纸</a>
+                    <a class="index-nav-item-selection" href="http://blog.creepersan.com">CreeperSan的记事本</a>
+                    <a class="index-nav-item-selection" href="#">CreeperSan的工具箱</a>
+                </div>
+                <div class="index-nav-item-div">
+                    <a class="index-nav-item-selection" href="#">关于</a>
+                    <a class="index-nav-item-selection" href="mailto:me@creepersan.com">联系我</a>
+                </div>
+            </div>
         </nav>
 
     </div>
