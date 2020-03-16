@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="shortcut icon" href="/res/display/overwatch-league-logo/favicon.ico">
+    <title>守望先锋战队Logo</title>
+    <style>
+        html,body,div{
+            width: 100%;height: 100%;margin: 0;padding: 0;display: flex;
+        }
+    </style>
+</head>
+<body>
+<div id='root-div' style="justify-content: center;align-items: center;display: flex;">
+    <img id="img-logo" style="height: 50%;"/>
+</div>
+</body>
+<script>
+    const logos = [
+        {
+            img : 'charge.svg',
+            color : '#122c42',
+        },{
+            img : 'defiant.svg',
+            color : '#000000',
+        },{
+            img : 'dragon.svg',
+            color : '#d22630',
+        },{
+            img : 'dynasty.svg',
+            color : '#000000',
+        },{
+            img : 'eternal.svg',
+            color : '#303d56'
+        },{
+            img : 'excelsior.svg',
+            color : '#171c38'
+        },{
+            img : 'fuel.svg',
+            color : '#032340'
+        },{
+            img : 'fusion.jpeg',
+            color : '#000000'
+        },{
+            img : 'gladiator.svg',
+            color : '#3c1053'
+        },{
+            img : 'hunter.svg',
+            color : '#ffa000'
+        },{
+            img : 'justice.svg',
+            color : '#990034'
+        },{
+            img : 'mayhem.svg',
+            color : '#000000'
+        },{
+            img : 'outlaws.svg',
+            color : '#000000'
+        },{
+            img : 'reign.svg',
+            color : '#c4c4c4'
+        },{
+            img : 'shock.svg',
+            color : '#000000'
+        },{
+            img : 'spark.svg',
+            color : '#fb7299'
+        },{
+            img : 'spitfire.svg',
+            color : '#59cbe8'
+        },{
+            img : 'titan.svg',
+            color : '#09226b'
+        },{
+            img : 'uprising.svg',
+            color : '#174b97'
+        },{
+            img : 'valiant.svg',
+            color : '#1888c6'
+        }
+    ]
+
+    function setLogo(index){
+        document.getElementById('img-logo').src = '/res/display/overwatch-league-logo/' + logos[index].img
+        document.getElementById('root-div').style.backgroundColor = logos[index].color
+    }
+
+    setInterval(() => {
+
+        setLogo(parseInt(Math.random() * logos.length))
+
+    }, 1000 * 60 * 30); // 30分钟更换一次
+
+    setLogo(parseInt(Math.random() * logos.length))
+
+
+</script>
+</html>
